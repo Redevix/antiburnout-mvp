@@ -13,12 +13,6 @@ export default function Home() {
         <p className="text-xl text-gray-600">
           80% das empresas não medem estresse. Nossa plataforma prevê sinais de burnout e entrega relatórios prontos para o RH — com linguagem humana.
         </p>
-        <button
-          onClick={() => router.push("/solicitar")}
-          className="mt-4 bg-blue-600 text-white font-semibold py-2 px-4 rounded hover:bg-blue-700 transition"
-        >
-          Solicitar Demonstração
-        </button>
       </section>
 
       <section className="space-y-4">
@@ -50,6 +44,15 @@ export default function Home() {
           <li className="flex items-center gap-2"><HeartPulse className="text-green-600 w-5 h-5" /> Melhore o bem-estar da sua equipe</li>
         </ul>
       </section>
+
+      <div className="pt-8 text-center">
+        <button
+          onClick={() => router.push("/solicitar")}
+          className="bg-blue-600 text-white font-semibold py-3 px-6 rounded hover:bg-blue-700 transition"
+        >
+          Solicitar Demonstração
+        </button>
+      </div>
     </main>
   );
 }
