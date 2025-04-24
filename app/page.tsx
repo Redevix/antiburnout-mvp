@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { LightningBoltIcon, SearchCircleIcon, CheckCircleIcon } from "@heroicons/react/24/outline";
+import { BoltIcon, CogIcon, CheckCircleIcon } from "@heroicons/react/24/outline";
 
 export default function Home() {
   return (
@@ -14,7 +14,7 @@ export default function Home() {
 
         <div className="space-y-10">
           <div className="flex items-start space-x-4">
-            <LightningBoltIcon className="h-10 w-10 text-blue-600" />
+            <BoltIcon className="h-10 w-10 text-blue-600" />
             <div>
               <h2 className="text-2xl font-semibold mb-2">O Problema</h2>
               <p>
@@ -24,7 +24,7 @@ export default function Home() {
           </div>
 
           <div className="flex items-start space-x-4">
-            <SearchCircleIcon className="h-10 w-10 text-blue-600" />
+            <CogIcon className="h-10 w-10 text-blue-600" />
             <div>
               <h2 className="text-2xl font-semibold mb-2">Nossa Solução</h2>
               <p>
