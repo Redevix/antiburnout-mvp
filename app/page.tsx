@@ -1,58 +1,59 @@
-"use client";
-
-import { useRouter } from "next/navigation";
-import { AlertTriangle, Brain, BarChart4, HeartPulse } from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
-  const router = useRouter();
-
   return (
-    <main className="p-8 max-w-4xl mx-auto space-y-12">
-      <section className="space-y-4">
-        <h1 className="text-4xl font-bold text-gray-900">Detecte o Burnout Antes que Aconteça</h1>
-        <p className="text-xl text-gray-600">
+    <main className="min-h-screen p-6 bg-white text-gray-900">
+      <div className="max-w-4xl mx-auto">
+        <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
+          Detecte o Burnout Antes que Aconteça
+        </h1>
+        <p className="text-lg md:text-xl mb-10">
           80% das empresas não medem estresse. Nossa plataforma prevê sinais de burnout e entrega relatórios prontos para o RH — com linguagem humana.
         </p>
-      </section>
 
-      <section className="space-y-4">
-        <h2 className="text-3xl font-semibold text-gray-800 flex items-center gap-2">
-          <AlertTriangle className="text-red-500" /> O Problema
-        </h2>
-        <p className="text-gray-700">
-          O burnout custa bilhões às empresas todos os anos. A maioria não tem ferramentas para medir estresse em tempo real, e o RH age só depois do estrago.
-        </p>
-      </section>
+        <div className="space-y-10">
+          <div className="flex items-start space-x-4">
+            <Image src="/problema.svg" alt="Problema" width={40} height={40} />
+            <div>
+              <h2 className="text-2xl font-semibold mb-2">O Problema</h2>
+              <p>
+                O burnout custa bilhões às empresas todos os anos. A maioria não tem ferramentas para medir estresse em tempo real, e o RH age só depois do estrago.
+              </p>
+            </div>
+          </div>
 
-      <section className="space-y-4">
-        <h2 className="text-3xl font-semibold text-gray-800 flex items-center gap-2">
-          <Brain className="text-purple-600" /> Nossa Solução
-        </h2>
-        <p className="text-gray-700">
-          Utilizamos dados biométricos simulados (como se fossem de pulseiras) e inteligência artificial para transformar números em recomendações práticas para o RH.
-        </p>
-      </section>
+          <div className="flex items-start space-x-4">
+            <Image src="/solucao.svg" alt="Solução" width={40} height={40} />
+            <div>
+              <h2 className="text-2xl font-semibold mb-2">Nossa Solução</h2>
+              <p>
+                Utilizamos dados biométricos simulados (como se fossem de pulseiras) e inteligência artificial para transformar números em recomendações práticas para o RH.
+              </p>
+            </div>
+          </div>
 
-      <section className="space-y-4">
-        <h2 className="text-3xl font-semibold text-gray-800 flex items-center gap-2">
-          <BarChart4 className="text-blue-600" /> Benefícios
-        </h2>
-        <ul className="list-disc list-inside text-gray-700 space-y-1">
-          <li className="flex items-center gap-2"><HeartPulse className="text-green-600 w-5 h-5" /> Relatórios fáceis de entender, com alertas personalizados</li>
-          <li className="flex items-center gap-2"><HeartPulse className="text-green-600 w-5 h-5" /> Reduza turnover</li>
-          <li className="flex items-center gap-2"><HeartPulse className="text-green-600 w-5 h-5" /> Aumente produtividade</li>
-          <li className="flex items-center gap-2"><HeartPulse className="text-green-600 w-5 h-5" /> Melhore o bem-estar da sua equipe</li>
-        </ul>
-      </section>
+          <div className="flex items-start space-x-4">
+            <Image src="/beneficios.svg" alt="Benefícios" width={40} height={40} />
+            <div>
+              <h2 className="text-2xl font-semibold mb-2">Benefícios</h2>
+              <p>
+                Relatórios fáceis de entender, com alertas personalizados. Reduza turnover, aumente produtividade e melhore o bem-estar da sua equipe.
+              </p>
+            </div>
+          </div>
+        </div>
 
-      <div className="pt-8 text-center">
-        <button
-          onClick={() => router.push("/solicitar")}
-          className="bg-blue-600 text-white font-semibold py-3 px-6 rounded hover:bg-blue-700 transition"
-        >
-          Solicitar Demonstração
-        </button>
+        <div className="mt-12">
+          <Link
+            href="/contato"
+            className="inline-block bg-blue-600 text-white text-lg px-6 py-3 rounded-lg hover:bg-blue-700 transition"
+          >
+            Solicitar Demonstração
+          </Link>
+        </div>
       </div>
     </main>
   );
 }
+
