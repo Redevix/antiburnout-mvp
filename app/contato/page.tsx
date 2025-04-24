@@ -9,8 +9,21 @@ export default function SolicitarDemonstração() {
         Preencha o formulário abaixo e nossa equipe entrará em contato para agendar a demonstração.
       </p>
 
-      {/* Formulário de Solicitação */}
-      <form className="space-y-6">
+      <form
+        action="https://formsubmit.co/teotoniosilva@gmail.com"
+        method="POST"
+        className="space-y-6"
+      >
+        {/* Desativa o CAPTCHA do FormSubmit */}
+        <input type="hidden" name="_captcha" value="false" />
+
+        {/* Redireciona após o envio */}
+        <input
+          type="hidden"
+          name="_next"
+          value="https://antiburnout-mvp.vercel.app/obrigado"
+        />
+
         <div>
           <label htmlFor="nome" className="block text-lg font-medium text-gray-700">
             Nome da Empresa
@@ -49,7 +62,7 @@ export default function SolicitarDemonstração() {
             required
             className="w-full px-4 py-3 mt-2 border border-gray-300 rounded-lg"
             rows={6}
-            placeholder="Fale um pouco sobre sua empresa ou o que você está buscando"
+            placeholder="Conte como podemos te ajudar"
           ></textarea>
         </div>
 
