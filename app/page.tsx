@@ -1,3 +1,7 @@
+<h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+  Detecte o Burnout Antes que Aconteça - V2
+</h1>
+
 export default function Home() {
   return (
     <div className="max-w-4xl mx-auto px-6 py-20 space-y-16">
