@@ -1,6 +1,9 @@
 <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
   Detecte o Burnout Antes que Aconteça - V2
 </h1>
+<h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+  Burnout Detectado - Novo Deploy
+</h1>
 
 export default function Home() {
   return (
