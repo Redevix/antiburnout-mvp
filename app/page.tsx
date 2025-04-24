@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import { LightningBoltIcon, SearchCircleIcon, CheckCircleIcon } from "@heroicons/react/24/outline";
 
 export default function Home() {
   return (
@@ -14,7 +14,7 @@ export default function Home() {
 
         <div className="space-y-10">
           <div className="flex items-start space-x-4">
-            <Image src="/problema.svg" alt="Problema" width={40} height={40} />
+            <LightningBoltIcon className="h-10 w-10 text-blue-600" />
             <div>
               <h2 className="text-2xl font-semibold mb-2">O Problema</h2>
               <p>
@@ -24,7 +24,7 @@ export default function Home() {
           </div>
 
           <div className="flex items-start space-x-4">
-            <Image src="/solucao.svg" alt="Solução" width={40} height={40} />
+            <SearchCircleIcon className="h-10 w-10 text-blue-600" />
             <div>
               <h2 className="text-2xl font-semibold mb-2">Nossa Solução</h2>
               <p>
@@ -34,7 +34,7 @@ export default function Home() {
           </div>
 
           <div className="flex items-start space-x-4">
-            <Image src="/beneficios.svg" alt="Benefícios" width={40} height={40} />
+            <CheckCircleIcon className="h-10 w-10 text-blue-600" />
             <div>
               <h2 className="text-2xl font-semibold mb-2">Benefícios</h2>
               <p>
@@ -56,4 +56,3 @@ export default function Home() {
     </main>
   );
 }
-
