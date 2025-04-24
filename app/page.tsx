@@ -1,30 +1,42 @@
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-gray-50 p-8 text-gray-900">
-      {/* Seção de Título com Imagem */}
-      <div className="text-center mb-10">
-        <h1 className="text-5xl font-extrabold text-blue-600 mb-4">
-          AntiBurnout: Medindo o Estresse de Forma Inteligente
-        </h1>
-        <p className="text-xl text-gray-700 mb-6">
-          80% das empresas não medem burnout. Nossa solução é simples: pulseiras que detectam níveis de estresse e relatórios automáticos em linguagem humana.
+    <div className="max-w-4xl mx-auto px-6 py-20 space-y-16">
+      {/* Seção: O Problema */}
+      <section>
+        <h2 className="text-4xl font-bold text-red-600 mb-4">O Problema</h2>
+        <p className="text-lg text-gray-700">
+          O burnout custa bilhões às empresas todos os anos. A maioria não tem ferramentas para medir estresse em tempo real, e o RH age só depois do estrago.
         </p>
-        <img
-          src="/img/pulseira-estresse.jpg" // Coloque sua imagem aqui
-          alt="Pulseira Anti-Burnout"
-          className="w-full max-w-md mx-auto rounded-xl shadow-lg"
-        />
-      </div>
+      </section>
 
-      {/* Botão de Solicitação */}
-      <div className="mt-8">
+      {/* Seção: Nossa Solução */}
+      <section>
+        <h2 className="text-4xl font-bold text-blue-600 mb-4">Nossa Solução</h2>
+        <p className="text-lg text-gray-700">
+          Utilizamos dados biométricos simulados (como se fossem de pulseiras) e inteligência artificial para transformar números em recomendações práticas para o RH.
+        </p>
+      </section>
+
+      {/* Seção: Benefícios */}
+      <section>
+        <h2 className="text-4xl font-bold text-green-600 mb-4">Benefícios</h2>
+        <ul className="text-lg text-gray-700 list-disc list-inside space-y-2">
+          <li>Relatórios fáceis de entender, com alertas personalizados.</li>
+          <li>Reduza turnover.</li>
+          <li>Aumente a produtividade.</li>
+          <li>Melhore o bem-estar da sua equipe.</li>
+        </ul>
+      </section>
+
+      {/* Botão de ação */}
+      <div className="text-center pt-10">
         <a
-          href="/contato"  // Alterar o link para uma página de contato ou formulário
-          className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg shadow-xl"
+          href="/contato"
+          className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition"
         >
           Solicitar Demonstração
         </a>
       </div>
-    </main>
+    </div>
   );
 }
